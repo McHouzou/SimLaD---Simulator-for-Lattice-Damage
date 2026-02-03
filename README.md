@@ -31,12 +31,12 @@ Example:
 ./lf_exec -i IO/triang/ -o IO/triang/
 
 ## Input generators
-Generate triangular lattice inputs:
+There is functionality for the creation of uniform, as well as disordered lattices, where noise can be added by random node displacements AND/OR random failure stress distributions, with a different failure stress for each beam. There is further functionality to place pre-cracks and decide the boundary conditions.
 
+Example for generating triangular lattice inputs:
 python3 analysis/InputCreator_triang.py <SR> <nmod>
 
-Generate kagome lattice inputs:
-
+Example for generating kagome lattice inputs:
 python3 analysis/InputCreator_kagome.py <x_amp> <noise> --nx 10 --ny 10 --out-dir ../src/IO/kagome --plot
 
 ## Output files
