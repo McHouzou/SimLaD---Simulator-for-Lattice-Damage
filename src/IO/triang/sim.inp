@@ -1,0 +1,5 @@
+0.125 strainStep
+158.08 bendStiff
+0.4 beamThickness
+0.050667 secondMomentOfArea
+0.0 inverseNoise
