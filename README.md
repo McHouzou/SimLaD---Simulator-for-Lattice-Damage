@@ -3,7 +3,8 @@
 SimLaD is a C++ simulator for fracture and damage in 2D beam‑lattices, accompanied by Python scripts for input generation and post‑processing. It supports both underconstrained, critical (Maxwell) and overconstrained lattices, includes bending and axial contributions, and uses a FIRE‑based relaxation scheme to resolve quasi‑static fracture events within a user defined tolerance.
 
 ## Highlights
-- Beam‑lattice mechanics with axial and bending contributions.
+- Beam‑lattice mechanics 
+with axial and bending contributions.
 - Quasi‑static fracture via strain stepping and event‑driven topology updates.
 - Input generators for triangular and kagome lattices.
 - Post‑processing utilities for visualization and analysis.
