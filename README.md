@@ -1,6 +1,6 @@
 # SimLaD — Simulator for Lattice Damage
 
-SimLaD is a C++ simulator for fracture and damage in 2D beam‑lattices, accompanied by Python scripts for input generation and post‑processing. It supports triangular and kagome lattices, includes bending and axial contributions, and uses a FIRE‑based relaxation scheme to resolve quasi‑static fracture events.
+SimLaD is a C++ simulator for fracture and damage in 2D beam‑lattices, accompanied by Python scripts for input generation and post‑processing. It supports both underconstrained, critical (Maxwell) and overconstrained lattices, includes bending and axial contributions, and uses a FIRE‑based relaxation scheme to resolve quasi‑static fracture events within a user defined tolerance.
 
 ## Highlights
 - Beam‑lattice mechanics with axial and bending contributions.
@@ -17,9 +17,8 @@ SimLaD is a C++ simulator for fracture and damage in 2D beam‑lattices, accompa
 	- Vis_lattice.py — Visualization script for lattice state.
 
 ## Build
-Build the simulator with a C++ compiler that supports OpenMP. Example build command:
-
-clang++ -O3 -march=native -fopenmp -o lf_exec lattice_fire.cpp
+Build the simulator with a C++ compiler (e.g. clang++, g++), using optimization flags (e.g. -O3 or -O2). Example build command:
+clang++ -O3 -march=native -o lf_exec lattice_fire.cpp
 
 ## Run
 The simulator expects input files in a directory (nodes.inp, bonds.inp, bends.inp, sim.inp). Provide input and output directories using flags:
@@ -28,7 +27,7 @@ The simulator expects input files in a directory (nodes.inp, bonds.inp, bends.in
 - -o path/to/output/
 
 Example:
-lf_exec -i ../src/IO/triang/ -o ../src/IO/triang/
+./lf_exec -i IO/triang/ -o IO/triang/
 
 ## Input generators
 Generate triangular lattice inputs:
